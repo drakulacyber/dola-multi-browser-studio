@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+backend/dola-proxy/node_modules/
+backend/dola-flow/node_modules/
+
+# Python
+backend/dola-studio/.venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.local
+
+# Build output
+dist/
+out/
+
+# Video output
+output/*.mp4
+output/*.webm
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Electron
+*.log

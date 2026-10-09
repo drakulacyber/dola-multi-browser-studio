@@ -1,0 +1,28 @@
+{
+  "name": "dola-multi-browser-studio",
+  "version": "1.0.0",
+  "description": "All-in-One Electron App: Dual Browser + AI Proxy + Video Gateway + Skill/Extension Manager",
+  "main": "main.js",
+  "author": "Dola Studio",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "start:proxy": "node backend/dola-proxy/src/server.js",
+    "start:studio": "python backend/dola-studio/server.py",
+    "start:flow": "cd backend/dola-flow && npm run dev",
+    "start:all": "concurrently \"npm run start:proxy\" \"npm run start:studio\" \"npm run start:flow\"",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "openai": "^4.77.0",
+    "adm-zip": "^0.5.16",
+    "concurrently": "^9.1.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  }
+}

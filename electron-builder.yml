@@ -1,0 +1,21 @@
+appId: com.dola.multibrowser
+productName: Dola Multi-Browser Studio
+directories:
+  output: dist
+files:
+  - main.js
+  - preload.js
+  - renderer/**/*
+  - skills/**/*
+  - extensions/**/*
+  - config/**/*
+  - node_modules/**/*
+extraResources:
+  - backend/**/*
+win:
+  target: nsis
+  icon: assets/icon.ico
+mac:
+  target: dmg
+linux:
+  target: AppImage
